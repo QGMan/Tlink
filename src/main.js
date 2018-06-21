@@ -19,6 +19,8 @@ Vue.prototype.$http=axios
 // 引入jquery及相关配置
 import $ from "jquery"
 
+// 引入公共样式
+import '../static/css/common.css'
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

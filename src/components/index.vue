@@ -9,33 +9,35 @@
         </div>
         <ul class="leftnav">
           <li>
-            首页
+            <router-link to="">首页</router-link>
           </li>
           <li>
-            应用展示
+            <router-link to="">应用展示</router-link>
           </li>
           <li>
             <router-link to="">
-              <span class="routercolor">设备探索</span>
+              设备探索
             </router-link>
           </li>
-          <li>
-            帮助中心
+          <li>           
+            <router-link to="">帮助中心</router-link>
           </li>
           <li>
-            信息反馈
+            <router-link to="">信息反馈</router-link>
           </li>
           <li>
-            企业版
+            <router-link to="">企业版</router-link>
           </li>
         </ul>
         <ul class="rightnav">
           <li>
-            控制台
+            <!-- style="border:1px solid black;padding:5px" -->
+            <router-link to="">控制台</router-link>
           </li>
           <li>
-
-            <span></span>物联网平台
+            <router-link to="">
+              <span></span>物联网平台
+            </router-link>           
           </li>
           <li>
             中文/EN
@@ -46,7 +48,7 @@
         <el-aside width="80px">
           <ul class="asidenav">
             <li>
-              <router-link to="">
+              <router-link to="/device/user" class="routerl">
                 <span class="el-icon-mobile-phone"></span>
                 <h5>监控中心</h5>
               </router-link>
@@ -114,7 +116,7 @@
           </ul>
         </el-aside>
         <el-main>
-          
+            <router-view></router-view>
         </el-main>
       </el-container>
     </el-container>
@@ -139,20 +141,6 @@
     color: #fff
   }
 
-  li,
-  ul,
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
-  div,
-  span {
-    margin: 0;
-    padding: 0
-  }
-
   .el-header {
     background-color: #282828;
     color: #fff;
@@ -167,12 +155,13 @@
     text-align: center;
     line-height: 200px;
   }
-
   .el-main {
     background-color: #f7f6f2;
     color: #333;
-    text-align: center;
-    line-height: 160px;
+    padding-left: 0;
+    padding-top: 0
+    /* text-align: center;
+    line-height: 160px; */
   }
 
   body>.el-container {
