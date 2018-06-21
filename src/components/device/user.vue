@@ -39,15 +39,28 @@
         <img v-if="!isShow" src="../../../static/img/next.png" alt="">
       </div>
     </div>
-    <div class="Tright">
+    <div class="Tright" ref="tright">
       <!-- 触发器列表 -->
-      <div >
-        <div>
+      <div>
+        <div class="title">
           <span>气象监测</span>
           <span>序列号：JSKPJ19QCFX8IRD2</span>
         </div>
         <div>
-          
+          <div>
+            <img src="../../../static/img/temperature.png" alt="">
+            <p>id:4770</p>
+          </div>
+          <div>
+            <h4>风速</h4>
+            <p>当前状态：<span>未连接</span></p>
+            <p>更新时间：2.18.06.07 10:09: 04</p>
+          </div>
+          <div>
+            <span></span>
+            <span></span>
+          </div>
+          <div></div>
         </div>
       </div>
     </div>
@@ -65,10 +78,13 @@
       avast1() {
         this.isShow = !this.isShow;
         if (this.isShow) {
+ this.$refs.tright.classList.add('Tright');
           this.$refs.avast.style.width = "350px";
           this.$refs.avast.style.borderRight = "1px solid #ccc";
           this.$refs.avast1.style.left = "420px"
         } else {
+ this.$refs.tright.classList.remove('Tright');
+          
           this.$refs.avast.style.width = 0;
           this.$refs.avast.style.border = "none";
           this.$refs.avast1.style.left = "80px"
@@ -94,6 +110,14 @@
     top: 70px;
     bottom: 0;
     /* z-index: 8; */
+  }
+
+  .avast::before .avast::after {
+    width: 0;
+    height: 0;
+    clear: both;
+    content: '';
+    overflow: hidden;
   }
 
   .avast1 {
@@ -154,6 +178,27 @@
     width: 24px;
     margin-right: 5px;
     vertical-align: middle
+  }
+
+  /* y右边样式 */
+
+  .Tright {
+    margin-left: 345px
+  }
+
+  .Tright .title {
+    width: 100%;
+    height: 55px;
+    line-height: 55px;
+    background: #eeede8;
+    padding: 0 20px;
+  }
+
+  .Tright .title span:nth-child(2) {
+    float: right;
+    font-size: 14px;
+    color: #999894;
+    margin-right: 20px;
   }
 
 </style>
