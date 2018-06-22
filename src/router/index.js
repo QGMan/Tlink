@@ -10,7 +10,7 @@ export default new Router({
     {
       path: '/',
       name: 'default',
-      redirect: '/index'
+      redirect: '/device/user'
     },
     {
       path:'/index',

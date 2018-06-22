@@ -46,21 +46,26 @@
           <span>气象监测</span>
           <span>序列号：JSKPJ19QCFX8IRD2</span>
         </div>
-        <div>
-          <div>
+        <div class="Tlist">
+          <div class="Tlist1">
             <img src="../../../static/img/temperature.png" alt="">
             <p>id:4770</p>
           </div>
-          <div>
+          <div class="Tlist2">
             <h4>风速</h4>
-            <p>当前状态：<span>未连接</span></p>
+            <p style="margin-bottom:15px">当前状态：
+              <span>未连接</span>
+            </p>
             <p>更新时间：2.18.06.07 10:09: 04</p>
           </div>
-          <div>
-            <span></span>
-            <span></span>
+          <div class="Tlist3">
+            <span>1.1</span>
+            <span>m/s</span>
           </div>
-          <div></div>
+          <div class="Tlist4">
+            <button>&gt 实时曲线</button>
+            <button>&gt 历史查询</button>
+          </div>
         </div>
       </div>
     </div>
@@ -71,30 +76,28 @@
     data() {
       return {
         isShow: true
-      }
+      };
     },
     methods: {
       // 点击图标后中间块样式的改变
       avast1() {
         this.isShow = !this.isShow;
         if (this.isShow) {
- this.$refs.tright.classList.add('Tright');
+          this.$refs.tright.classList.add("Tright");
           this.$refs.avast.style.width = "350px";
           this.$refs.avast.style.borderRight = "1px solid #ccc";
-          this.$refs.avast1.style.left = "420px"
+          this.$refs.avast1.style.left = "420px";
         } else {
- this.$refs.tright.classList.remove('Tright');
-          
+          this.$refs.tright.classList.remove("Tright");
+
           this.$refs.avast.style.width = 0;
           this.$refs.avast.style.border = "none";
-          this.$refs.avast1.style.left = "80px"
+          this.$refs.avast1.style.left = "80px";
         }
       }
     },
-    components: {
-
-    }
-  }
+    components: {}
+  };
 
 </script>
 
@@ -116,7 +119,7 @@
     width: 0;
     height: 0;
     clear: both;
-    content: '';
+    content: "";
     overflow: hidden;
   }
 
@@ -126,7 +129,7 @@
     cursor: pointer;
     position: fixed;
     left: 420px;
-    top: 50%
+    top: 50%;
   }
 
   .devicenav {
@@ -145,7 +148,7 @@
   }
 
   .devicenav li a {
-    color: #888
+    color: #888;
   }
 
   .user_d1 {
@@ -156,7 +159,6 @@
   .user_d1 img {
     width: 55px;
     padding: 8px;
-
   }
 
   .user_d2 {
@@ -165,7 +167,6 @@
     font-size: 18px;
     height: 68px;
     line-height: 68px;
-
   }
 
   .user_d3 {
@@ -177,16 +178,16 @@
   .user_d3 img {
     width: 24px;
     margin-right: 5px;
-    vertical-align: middle
+    vertical-align: middle;
   }
 
   /* y右边样式 */
 
   .Tright {
-    margin-left: 345px
+    margin-left: 345px;
   }
 
-  .Tright .title {
+  .title {
     width: 100%;
     height: 55px;
     line-height: 55px;
@@ -194,11 +195,80 @@
     padding: 0 20px;
   }
 
-  .Tright .title span:nth-child(2) {
+  .title span:nth-child(2) {
     float: right;
     font-size: 14px;
     color: #999894;
     margin-right: 20px;
+  }
+
+  .Tlist {
+    width: 100%;
+    height: 115px;
+    border-bottom: 1px solid #ccc;
+    padding: 6px 15px;
+  }
+
+  .Tlist1 {
+    width: 16%;
+    min-width: 80px;
+    float: left;
+  }
+
+  .Tlist1 img {
+    max-width: 80px;
+    /* margin: 6px 0; */
+  }
+
+  .Tlist1 p {
+    color: #999894;
+    padding: 0 0 10px 10px;
+  }
+
+  .Tlist2 {
+    width: 33.3%;
+    float: left;
+    padding: 10px 0 0 0
+  }
+
+  .Tlist2 p {
+    color: #999894;
+  }
+
+  .Tlist2 p span {
+    color: red;
+  }
+
+  .Tlist3 {
+    width: 25%;
+    height: 115px;
+    line-height: 115px;
+    float: left;
+    text-align: center;
+  }
+
+  .Tlist3 span {
+    font-size: 30px;
+    padding-right: 10px
+  }
+
+  .Tlist4 {
+    width: 25%;
+    float: left
+  }
+
+  .Tlist4 button {
+    float: left;
+    height: 115px;
+    line-height: 115px;
+    border: none;
+    color: #209e78;
+    background: none;
+    font-size: 14px;
+    /* 手型 */
+    cursor: pointer;
+    /* 去掉button点击时的样式 */
+    outline: none
   }
 
 </style>
