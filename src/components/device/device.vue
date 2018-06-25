@@ -25,7 +25,7 @@
               <h3>管理设备</h3>
               <ul>
                   <li>
-                      <router-link to="">添加设备</router-link>
+                      <router-link to="/device/deviceadd">添加设备</router-link>
                   </li>
                   <li>
                       <router-link to="">萤石云</router-link>

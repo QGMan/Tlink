@@ -7,6 +7,7 @@ import deviceDisplay from '@/components/device/deviceDisplay'
 import device_1 from '@/components/device/device_1'
 import device_0 from '@/components/device/device_0'
 import deviceDelet from '@/components/device/deviceDelet'
+import deviceadd from '@/components/device/deviceadd'
 
 Vue.use(Router)
 
@@ -51,6 +52,11 @@ export default new Router({
               path: '/device/deviceDelet',
               name: 'deviceDelet',
               component: deviceDelet
+            },
+            {
+              path: '/device/deviceadd',
+              name: 'deviceadd',
+              component: deviceadd
             }
           ]
         },
