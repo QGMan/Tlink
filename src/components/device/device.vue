@@ -8,13 +8,13 @@
                       <router-link to="/device/deviceDisplay">所有设备</router-link>
                   </li>
                   <li>
-                      <router-link to="">已连接设备</router-link>
+                      <router-link to="/device/device_1">已连接设备</router-link>
                   </li>
                   <li>
-                      <router-link to="">未连接设备</router-link>
+                      <router-link to="/device/device_0">未连接设备</router-link>
                   </li>
                   <li>
-                      <router-link to="">已删除设备</router-link>
+                      <router-link to="/device/deviceDelet">已删除设备</router-link>
                   </li>
                   <li>
                       <router-link to="">已禁用设备</router-link>
