@@ -54,7 +54,7 @@
               </router-link>
             </li>
             <li>
-              <router-link to="">
+              <router-link to="/device/deviceDisplay">
                 <span class="el-icon-menu"></span>
                 <h5>设备</h5>
               </router-link>
