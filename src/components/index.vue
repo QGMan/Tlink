@@ -66,7 +66,7 @@
               </router-link>
             </li>
             <li>
-              <router-link to="">
+              <router-link to="/device/triggerAll">
                 <span class="el-icon-bell"></span>
                 <h5>触发器</h5>
               </router-link>

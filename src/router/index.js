@@ -9,32 +9,34 @@ import device_0 from '@/components/device/device_0'
 import deviceDelet from '@/components/device/deviceDelet'
 import deviceadd from '@/components/device/deviceadd'
 import deviceMap from '@/components/device/deviceMap'
+import alairms from '@/components/device/alairms'
+import triggerAll from '@/components/device/triggerAll'
+import trigger_1 from '@/components/device/trigger_1'
+import trigger_0 from '@/components/device/trigger_0'
+import triggerAdd from '@/components/device/triggerAdd'
 
 Vue.use(Router)
 
 export default new Router({
-  routes: [
-    {
+  routes: [{
       path: '/',
       name: 'default',
       redirect: '/device/user'
     },
     {
-      path:'/index',
-      name:'index',
-      component:index,
-      children:[
-        {
-          path:'/device/user',
-          name:'user',
-          component:user,
+      path: '/index',
+      name: 'index',
+      component: index,
+      children: [{
+          path: '/device/user',
+          name: 'user',
+          component: user,
         },
         {
-          path:'/device/device',
-          name:'device',
-          component:device,
-          children:[
-            {
+          path: '/device/device',
+          name: 'device',
+          component: device,
+          children: [{
               path: '/device/deviceDisplay',
               name: 'deviceDisplay',
               component: deviceDisplay
@@ -62,9 +64,35 @@ export default new Router({
           ]
         },
         {
-          path:'/device/deviceMap',
-          name:'deviceMap',
-          component:deviceMap
+          path: '/device/deviceMap',
+          name: 'deviceMap',
+          component: deviceMap
+        },
+        {
+          path: '/device/alairms',
+          name: 'alairms',
+          component: alairms,
+          children: [{
+              path: '/device/triggerAll',
+              name: 'triggerAll',
+              component: triggerAll
+            },
+            {
+              path: '/device/trigger_1',
+              name: 'trigger_1',
+              component: trigger_1
+            },
+            {
+              path: '/device/trigger_0',
+              name: 'trigger_0',
+              component: trigger_1
+            },
+            {
+              path: '/device/triggerAdd',
+              name: 'triggerAdd',
+              component: triggerAdd
+            }
+          ]
         }
       ]
     }
