@@ -60,7 +60,7 @@
               </router-link>
             </li>
             <li>
-              <router-link to="">
+              <router-link to="/device/deviceMap">
                 <span class="el-icon-location"></span>
                 <h5>设备地图</h5>
               </router-link>

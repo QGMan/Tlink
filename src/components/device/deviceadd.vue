@@ -38,7 +38,7 @@
         <b-map></b-map>
 
         <el-form-item>
-          <el-button type="primary" @click="onSubmit">立即创建</el-button>
+          <el-button size="small" round type="info" @click="onSubmit">立即创建</el-button>        
         </el-form-item>
       </el-form>
     </div>

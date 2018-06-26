@@ -8,6 +8,7 @@ import device_1 from '@/components/device/device_1'
 import device_0 from '@/components/device/device_0'
 import deviceDelet from '@/components/device/deviceDelet'
 import deviceadd from '@/components/device/deviceadd'
+import deviceMap from '@/components/device/deviceMap'
 
 Vue.use(Router)
 
@@ -60,6 +61,11 @@ export default new Router({
             }
           ]
         },
+        {
+          path:'/device/deviceMap',
+          name:'deviceMap',
+          component:deviceMap
+        }
       ]
     }
   ]
