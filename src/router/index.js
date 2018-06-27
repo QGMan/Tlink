@@ -19,6 +19,14 @@ import trigger_0 from '@/components/device/trigger_0'
 import triggerAdd from '@/components/device/triggerAdd'
 // 用户中心
 import userinfo from '@/components/user/userinfo'
+import contact from '@/components/user/contact'
+import noterecord from '@/components/user/noterecord'
+import noteshop from '@/components/user/noteshop'
+import passward from '@/components/user/passward'
+import userAll from '@/components/user/userAll'
+import userapi from '@/components/user/userapi'
+import usersetting from '@/components/user/usersetting'
+import weixinlist from '@/components/user/weixinlist'
 
 Vue.use(Router)
 
@@ -107,7 +115,49 @@ export default new Router({
         {
           path:'/user/userinfo',
           name:'userinfo',
-          component:userinfo
+          component:userinfo,
+          children:[
+            {
+              path:'/user/usersetting',
+              name: 'usersetting',
+              component: usersetting
+            },
+            {
+              path:'/user/userAll',
+              name: 'userAll',
+              component: userAll
+            },
+            {
+              path: '/user/contact',
+              name: 'contact',
+              component: contact
+            },
+            {
+              path: '/user/noterecord',
+              name: 'noterecord',
+              component: noterecord
+            },
+            {
+              path: '/user/noteshop',
+              name: 'noteshop',
+              component: noteshop
+            },
+            {
+              path: '/user/passward',
+              name: 'passward',
+              component: passward
+            },
+            {
+              path: '/user/userapi',
+              name: 'userapi',
+              component: userapi
+            },
+            {
+              path: '/user/weixinlist',
+              name: 'weixinlist',
+              component: weixinlist
+            }
+          ]
         },
         
       ]

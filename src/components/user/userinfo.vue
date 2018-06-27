@@ -5,13 +5,13 @@
                 <h3>用户中心</h3>                  
               <ul>
                   <li>
-                      <router-link to="/device/deviceDisplay"><img src="../../../static/img/user_infos.png" alt=""> 个人设置</router-link>
+                      <router-link to="/user/usersetting"><img src="../../../static/img/user_infos.png" alt=""> 个人设置</router-link>
                   </li>
                   <li>
-                      <router-link to="/device/device_1"><img src="../../../static/img/all_con.png" alt=""> 所有联系人</router-link>
+                      <router-link to="/user/userAll"><img src="../../../static/img/all_con.png" alt=""> 所有联系人</router-link>
                   </li>
                   <li>
-                      <router-link to="/device/device_0"><img src="../../../static/img/weixinList.png" alt=""> 绑定微信列表</router-link>
+                      <router-link to="/user/weixinlist"><img src="../../../static/img/weixinList.png" alt=""> 绑定微信列表</router-link>
                   </li>
               </ul>
           </div>
@@ -19,19 +19,19 @@
               <h3>管理</h3>
               <ul>
                   <li>
-                      <router-link to="/device/deviceadd"><i class="el-icon-goods"></i> 用户API</router-link>
+                      <router-link to="/user/userapi"><i class="el-icon-goods"></i> 用户API</router-link>
                   </li>
                   <li>
-                      <router-link to=""><i class=" el-icon-refresh"></i> 修改密码</router-link>
+                      <router-link to="/user/passward"><i class=" el-icon-refresh"></i> 修改密码</router-link>
                   </li>
                   <li>
-                      <router-link to=""><i class="el-icon-edit-outline"></i> 添加联系人</router-link>
+                      <router-link to="/user/contact"><i class="el-icon-edit-outline"></i> 添加联系人</router-link>
                   </li>
                   <li>
-                      <router-link to=""><i class="el-icon-message"></i> 短信购买</router-link>
+                      <router-link to="/user/noteshop"><i class="el-icon-message"></i> 短信购买</router-link>
                   </li>
                   <li>
-                      <router-link to=""><i class="el-icon-tickets"></i> 短信购买记录</router-link>
+                      <router-link to="/user/noterecord"><i class="el-icon-tickets"></i> 短信购买记录</router-link>
                   </li>
               </ul>
           </div>
