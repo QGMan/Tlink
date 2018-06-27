@@ -29,7 +29,7 @@
         <el-col :span="8" class="four">
           <div class="grid-content bg-purple">
             <router-link to="">设置连接</router-link>
-            <router-link to="">编辑设备</router-link>
+            <router-link to="/device/deviceedit">编辑设备</router-link>
             <router-link to="">删除设备</router-link>
           </div>
         </el-col>

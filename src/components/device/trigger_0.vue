@@ -75,9 +75,9 @@
               </div>
             </el-dialog>
             <!-- 删除 -->
-            <template>
-              <el-button style="color:#888" type="text" @click="open2">删除</el-button>
-            </template>
+  
+              <el-button style="color:#888" class="delet" type="text" @click="open2">
+  <i class="el-icon-delete"></i> 删除</el-button>
           </div>
         </el-col>
       </el-row>
@@ -197,5 +197,14 @@
     display: block;
     padding: 10px
   }
-
+  .four .delet{
+      position: absolute;
+    top: 15%
+  }
+.four .delet i{
+    display: block;
+    font-size: 26px;
+    padding-bottom: 5px;
+    color: #000
+}
 </style>

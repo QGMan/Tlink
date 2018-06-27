@@ -21,3 +21,6 @@
   .router-link-active{
     text-decoration: none;
   }
+  body,html{
+    height: 100%;
+  }

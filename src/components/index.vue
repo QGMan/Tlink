@@ -45,7 +45,7 @@
         </ul>
       </el-header>
       <el-container>
-        <el-aside width="80px">
+        <el-aside width="100px">
           <ul class="asidenav">
             <li>
               <router-link to="/device/user" class="routerl">
@@ -102,7 +102,7 @@
               </router-link>
             </li>
             <li>
-              <router-link to="">
+              <router-link to="/user/userinfo">
                 <span class="el-icon-service"></span>
                 <h5>用户中心</h5>
               </router-link>
@@ -228,18 +228,25 @@
 
   .asidenav {
     width: 100%;
+    max-height:none;
+    height: 100%;
     padding-top: 20px;
+    /* margin-right: 20px; */
 
   }
   .asidenav li {
     width: 100%;
     height: 40px;
     line-height: 40px;
-    margin-bottom: 25px;
+    /* margin-bottom: 25px; */
+    padding: 10px 0;
     text-align: center;
     position: relative;
     text-align: center
   }
+ .asidenav li:hover{
+   background:#5f5f5f
+ }
 
   .asidenav li span {
     font-size: 16px;
