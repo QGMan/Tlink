@@ -60,13 +60,17 @@ a {
   border-right: 1px solid #ccc;
 }
 .d_left1 {
-  padding: 20px 0 30px 40px;
+  padding: 20px 0 30px 0;
 }
 .d_left1 h3 {
+  padding-left: 40px;
   margin-bottom: 20px;
 }
 .d_left1 ul li {
-  margin-bottom: 20px;
+  padding: 10px 0 10px 40px;
+}
+.d_left1 ul li:hover{
+  background: #ccc;
 }
 .d_left2 {
   /* padding: 0 0 0 40px; */
@@ -76,10 +80,13 @@ a {
   border-bottom: 1px solid #ccc;
 }
 .d_left2 ul {
-  padding-left: 40px;
+  /* padding-left: 40px; */
 }
 .d_left2 ul li {
-  padding: 10px 0;
+  padding: 10px 0 10px 40px;
+}
+.d_left2 ul li:hover{
+  background: #ccc;
 }
 .d_right {
   width: 79%;

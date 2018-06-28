@@ -5,7 +5,7 @@
       <el-row :gutter="20" class="all">
         <el-col :span="3" class="one">
           <div class="grid-content bg-purple">
-            <router-link to="">
+            <router-link to="" class="image">
               <img src="../../../static/img/online-1.png" alt="">
             </router-link>
           </div>
@@ -63,10 +63,17 @@
     border-bottom: 1px solid #ccc;
 }
 .all .one {
-padding-top: 15px
+padding-top: 0px
+}
+.one .image{
+  width: 100%;
+  height:90px;
+  display: block;
 }
 .all .one img{
-width: 80%;
+  display: block;
+  margin-top: 10%;
+  height: 80%;
 }
 .all .two{
     padding-top: 20px;

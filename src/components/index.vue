@@ -102,7 +102,7 @@
               </router-link>
             </li>
             <li>
-              <router-link to="/user/userinfo">
+              <router-link to="/user/usersetting">
                 <span class="el-icon-service"></span>
                 <h5>用户中心</h5>
               </router-link>

@@ -63,8 +63,8 @@
             <span>m/s</span>
           </div>
           <div class="Tlist4">
-            <button>&gt 实时曲线</button>
-            <button>&gt 历史查询</button>
+            <button>&gt; 实时曲线</button>
+            <button>&gt; 历史查询</button>
           </div>
         </div>
       </div>
