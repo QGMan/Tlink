@@ -20,6 +20,7 @@ import triggerAdd from '@/components/device/triggerAdd'
 // 用户中心
 import userinfo from '@/components/user/userinfo'
 import contact from '@/components/user/contact'
+import contactedit from '@/components/user/contactedit'
 import noterecord from '@/components/user/noterecord'
 import noteshop from '@/components/user/noteshop'
 import passward from '@/components/user/passward'
@@ -27,6 +28,7 @@ import userAll from '@/components/user/userAll'
 import userapi from '@/components/user/userapi'
 import usersetting from '@/components/user/usersetting'
 import weixinlist from '@/components/user/weixinlist'
+import feedback from '@/components/user/feedback'
 
 Vue.use(Router)
 
@@ -133,6 +135,11 @@ export default new Router({
               component: contact
             },
             {
+              path: '/user/contactedit',
+              name: 'contactedit',
+              component: contactedit
+            },
+            {
               path: '/user/noterecord',
               name: 'noterecord',
               component: noterecord
@@ -159,7 +166,11 @@ export default new Router({
             }
           ]
         },
-        
+        {
+          path:'/user/feedback',
+          name:'feedback',
+          component: feedback
+        }
       ]
     }
   ]

@@ -108,7 +108,7 @@
               </router-link>
             </li>
             <li>
-              <router-link to="">
+              <router-link to="/user/feedback">
                 <span class="el-icon-phone-outline"></span>
                 <h5>反馈中心</h5>
               </router-link>

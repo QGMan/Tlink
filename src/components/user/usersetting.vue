@@ -46,6 +46,9 @@
         <el-form-item label="地址" style="display:block">
           <el-input v-model="form.address"></el-input>
         </el-form-item>
+          <el-form-item>
+    <el-button size="small" type="info" @click="onSubmit1">保存更改</el-button>
+  </el-form-item>
       </el-form>
     </div>
     <div class="company" v-show="check2">
@@ -74,6 +77,9 @@
         <el-form-item label="地址" style="display:block">
           <el-input v-model="form2.address"></el-input>
         </el-form-item>
+                  <el-form-item>
+    <el-button size="small" type="info" @click="onSubmit2">保存更改</el-button>
+  </el-form-item>
       </el-form>
     </div>
   </div>
@@ -119,7 +125,10 @@
         this.check1 = false;
         this.check2 = true;
 
-      }
+      },
+      // 个人设置信息更改保存
+      onSubmit1(){},
+      onSubmit2(){},
     }
   };
 

@@ -1,7 +1,7 @@
 <template>
   <div class="page">
       <header>
-          <h3>添加联系人</h3>
+          <h3>编辑联系人</h3>
       </header>
       <div class="content">
           <el-row :gutter="20">
