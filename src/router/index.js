@@ -29,6 +29,8 @@ import userapi from '@/components/user/userapi'
 import usersetting from '@/components/user/usersetting'
 import weixinlist from '@/components/user/weixinlist'
 import feedback from '@/components/user/feedback'
+import feadword from '@/components/user/feadword'
+import feaddetails from '@/components/user/feaddetails'
 
 Vue.use(Router)
 
@@ -169,7 +171,19 @@ export default new Router({
         {
           path:'/user/feedback',
           name:'feedback',
-          component: feedback
+          component: feedback,
+          children:[
+            {
+              name:'feadword',
+              path:'/user/feadword',
+              component: feadword
+            },
+            {
+              name:'feaddetails',
+              path:'/user/feaddetails',
+              component:feaddetails
+            }
+          ]
         }
       ]
     }

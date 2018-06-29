@@ -44,7 +44,7 @@
           </li>
         </ul>
       </el-header>
-      <el-container>
+      <el-container style="position:absolute;width:100%;height:100%;top:60px;left:100px">
         <el-aside width="100px">
           <ul class="asidenav">
             <li>
@@ -108,7 +108,7 @@
               </router-link>
             </li>
             <li>
-              <router-link to="/user/feedback">
+              <router-link to="/user/feadword">
                 <span class="el-icon-phone-outline"></span>
                 <h5>反馈中心</h5>
               </router-link>
@@ -142,18 +142,27 @@
   }
 
   .el-header {
+    width: 100%;
     background-color: #282828;
     color: #fff;
     text-align: center;
     line-height: 60px;
-    border-bottom: 1px solid #5f5f5f
+    border-bottom: 1px solid #5f5f5f;
+    z-index: 8;
+    position: fixed;
+    left: 10px;
+    top: 0;
   }
 
   .el-aside {
+    height: 100%;
     background-color: #282828;
     color: #fff;
     text-align: center;
-    line-height: 200px;
+    /* line-height: 200px; */
+    position: fixed;
+    left: 10px;
+    top: 60px;
   }
   .el-main {
     background-color: #f7f6f2;

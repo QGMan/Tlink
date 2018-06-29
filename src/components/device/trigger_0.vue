@@ -12,8 +12,8 @@
       </div>
       <el-row :gutter="20" class="all">
         <el-col :span="3" class="one">
-          <div class="grid-content bg-purple">
-            <router-link to="">
+          <div class="grid-content bg-purple image">
+            <router-link to="" class="image">
               <img src="../../../static/img/GPS.png" alt="">
             </router-link>
           </div>
@@ -21,7 +21,7 @@
         <el-col :span="7" class="two">
           <div class="grid-content bg-purple">
             <p style="font-size:16px;color:#000">气象监测</p>
-            <p>联系人：
+            <p>联系人1111：
               <span>王成</span>
             </p>
             <p>当前状态：
@@ -30,7 +30,7 @@
             </p>
           </div>
         </el-col>
-        <el-col :span="8" class="three">
+<el-col :span="8" class="three" style="overflow:hidden">
           <div class="grid-content bg-purple">
 
             <p>触发条件
@@ -38,6 +38,7 @@
             </p>
           </div>
         </el-col>
+        <h1>dahfhpuiosh</h1>
         <el-col :span="4" class="four" :offset="2">
           <div class="grid-content bg-purple">
             <!-- 编辑 -->
@@ -75,9 +76,10 @@
               </div>
             </el-dialog>
             <!-- 删除 -->
-  
-              <el-button style="color:#888" class="delet" type="text" @click="open2">
+            <template>
+<el-button style="color:#888" class="delet" type="text" @click="open2">
   <i class="el-icon-delete"></i> 删除</el-button>
+            </template>
           </div>
         </el-col>
       </el-row>
@@ -86,125 +88,132 @@
 </template>
 
 <script>
-  export default {
-    data() {
-      return {
-        opening: false, //开关切换
-        dialogTableVisible: false,
-        dialogFormVisible: false,
-        form: {
-          name: '',
-          region: '',
-          date1: '',
-          date2: '',
-          delivery: false,
-          type: [],
-          resource: '',
-          desc: ''
-        },
-        formLabelWidth: '100px'
-      };
-    },
-
-    components: {},
-    methods: {
-      opentaggle() {
-        this.opening = !this.opening
+export default {
+  data() {
+    return {
+      opening: true, //开关切换
+      dialogTableVisible: false,
+      dialogFormVisible: false,
+      form: {
+        name: "",
+        region: "",
+        date1: "",
+        date2: "",
+        delivery: false,
+        type: [],
+        resource: "",
+        desc: ""
       },
-      open2() {
-        this.$confirm('数据删除后将不能恢复, 你确定要删除吗?', '提示', {
-          confirmButtonText: '确定',
-          cancelButtonText: '取消',
-          type: 'warning'
-        }).then(() => {
+      formLabelWidth: "100px"
+    };
+  },
+
+  components: {},
+  methods: {
+    opentaggle() {
+      this.opening = !this.opening;
+    },
+    open2() {
+      this.$confirm("数据删除后将不能恢复, 你确定要删除吗?", "提示", {
+        confirmButtonText: "确定",
+        cancelButtonText: "取消",
+        type: "warning"
+      })
+        .then(() => {
           this.$message({
-            type: 'success',
-            message: '删除成功!'
+            type: "success",
+            message: "删除成功!"
           });
-        }).catch(() => {
+        })
+        .catch(() => {
           this.$message({
-            type: 'info',
-            message: '已取消删除'
+            type: "info",
+            message: "已取消删除"
           });
         });
-      }
     }
-  };
-
+  }
+};
 </script>
 
 <style scoped>
-  .deviceAll {
-    margin-left: 40px;
-  }
+.deviceAll {
+  margin-left: 40px;
+}
 
-  .header {
-    border-bottom: 1px solid #ccc;
-    padding-top: 10px;
-    height: 50px;
-    line-height: 50px;
-  }
+.header {
+  border-bottom: 1px solid #ccc;
+  padding-top: 10px;
+  height: 50px;
+  line-height: 50px;
+}
 
-  .header h4 {
-    float: left;
-  }
+.header h4 {
+  float: left;
+}
 
-  .header .head_right {
-    float: right;
-  }
+.header .head_right {
+  float: right;
+}
 
-  .all {
-    height: 106px;
-    border-bottom: 1px solid #ccc;
-  }
+.all {
+  height: 106px;
+  border-bottom: 1px solid #ccc;
+}
 
-  .all .one {
-    padding-top: 15px;
-  }
+.all .one {
+  padding-top: 10px;
+  height: 105px;
+}
+.one .image{
+  width: 80%;
+  height:105px;
+  display: block;
+}
+.all .one img {
+  display: block;
+  height: 80%;
+  border: 1px dashed #ccc;
+}
 
-  .all .one img {
-    display: inline-block;
-    width: 80%;
-    border: 1px dashed #ccc;
-  }
+.all .two {
+  padding-top: 20px;
+  font-size: 14px;
+  color: #999894;
+}
 
-  .all .two {
-    padding-top: 20px;
-    font-size: 14px;
-    color: #999894;
-  }
+.all .three {
+  height: 90px;
+  line-height: 90px;
+  color: #888;
+  font-size: 16px;
+}
 
-  .all .three {
-    height: 90px;
-    line-height: 90px;
-    color: #888;
-    font-size: 16px;
-  }
+.all .four {
+  height: 90px;
+  line-height: 90px;
+  position: relative;
+}
 
-  .all .four {
-    height: 90px;
-    line-height: 90px;
-  }
+.all .four a {
+  color: #888;
+  padding: 0 5px;
+  font-size: 14px;
+}
 
-  .all .four a {
-    color: #888;
-    padding: 0 5px;
-    font-size: 14px;
-  }
-
-  .four img {
-    width: 24px;
-    display: block;
-    padding: 10px
-  }
-  .four .delet{
-      position: absolute;
-    top: 15%
-  }
-.four .delet i{
-    display: block;
-    font-size: 26px;
-    padding-bottom: 5px;
-    color: #000
+.four img {
+  width: 24px;
+  display: block;
+  padding: 10px;
+}
+.four .delet {
+  position: absolute;
+  top: 17%;
+}
+.four .delet i {
+  display: block;
+  font-size: 26px;
+  padding-bottom: 5px;
+  color: #000;
 }
 </style>

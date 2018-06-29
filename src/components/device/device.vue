@@ -1,5 +1,5 @@
 <template>
-  <div class="page">
+  <div class="page" style="height:100%">
       <div class="d_left">
           <div class="d_left1">
                 <h3>我的设备</h3>                  
@@ -56,11 +56,13 @@ a {
 .d_left {
   width: 20%;
   float: left;
-  min-height: 750px;
+  min-height: 100%;
+  /* min-height: 750px; */
   border-right: 1px solid #ccc;
 }
 .d_left1 {
   padding: 20px 0 30px 0;
+  
 }
 .d_left1 h3 {
   padding-left: 40px;
@@ -74,6 +76,7 @@ a {
 }
 .d_left2 {
   /* padding: 0 0 0 40px; */
+
 }
 .d_left2 h3 {
   padding: 0 0 10px 40px;

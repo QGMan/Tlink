@@ -13,7 +13,7 @@
       <el-row :gutter="20" class="all">
         <el-col :span="3" class="one">
           <div class="grid-content bg-purple">
-            <router-link to="">
+            <router-link to="" class="image">
               <img src="../../../static/img/GPS.png" alt="">
             </router-link>
           </div>
@@ -87,127 +87,132 @@
 </template>
 
 <script>
-  export default {
-    data() {
-      return {
-        opening: true, //开关切换
-        dialogTableVisible: false,
-        dialogFormVisible: false,
-        form: {
-          name: '',
-          region: '',
-          date1: '',
-          date2: '',
-          delivery: false,
-          type: [],
-          resource: '',
-          desc: ''
-        },
-        formLabelWidth: '100px'
-      };
-    },
-
-    components: {},
-    methods: {
-      opentaggle() {
-        this.opening = !this.opening
+export default {
+  data() {
+    return {
+      opening: true, //开关切换
+      dialogTableVisible: false,
+      dialogFormVisible: false,
+      form: {
+        name: "",
+        region: "",
+        date1: "",
+        date2: "",
+        delivery: false,
+        type: [],
+        resource: "",
+        desc: ""
       },
-      open2() {
-        this.$confirm('数据删除后将不能恢复, 你确定要删除吗?', '提示', {
-          confirmButtonText: '确定',
-          cancelButtonText: '取消',
-          type: 'warning'
-        }).then(() => {
+      formLabelWidth: "100px"
+    };
+  },
+
+  components: {},
+  methods: {
+    opentaggle() {
+      this.opening = !this.opening;
+    },
+    open2() {
+      this.$confirm("数据删除后将不能恢复, 你确定要删除吗?", "提示", {
+        confirmButtonText: "确定",
+        cancelButtonText: "取消",
+        type: "warning"
+      })
+        .then(() => {
           this.$message({
-            type: 'success',
-            message: '删除成功!'
+            type: "success",
+            message: "删除成功!"
           });
-        }).catch(() => {
+        })
+        .catch(() => {
           this.$message({
-            type: 'info',
-            message: '已取消删除'
+            type: "info",
+            message: "已取消删除"
           });
         });
-      }
     }
-  };
-
+  }
+};
 </script>
 
 <style scoped>
-  .deviceAll {
-    margin-left: 40px;
-  }
-
-  .header {
-    border-bottom: 1px solid #ccc;
-    padding-top: 10px;
-    height: 50px;
-    line-height: 50px;
-  }
-
-  .header h4 {
-    float: left;
-  }
-
-  .header .head_right {
-    float: right;
-  }
-
-  .all {
-    height: 106px;
-    border-bottom: 1px solid #ccc;
-  }
-
-  .all .one {
-    padding-top: 15px;
-  }
-
-  .all .one img {
-    display: inline-block;
-    width: 80%;
-    border: 1px dashed #ccc;
-  }
-
-  .all .two {
-    padding-top: 20px;
-    font-size: 14px;
-    color: #999894;
-  }
-
-  .all .three {
-    height: 90px;
-    line-height: 90px;
-    color: #888;
-    font-size: 16px;
-  }
-
-  .all .four {
-    height: 90px;
-    line-height: 90px;
-    position: relative;
-  }
-
-  .all .four a {
-    color: #888;
-    padding: 0 5px;
-    font-size: 14px;
-  }
-
-  .four img {
-    width: 24px;
-    display: block;
-    padding: 10px
-  }
-  .four .delet{
-      position: absolute;
-    top: 17%
-  }
-.four .delet i{
-    display: block;
-    font-size: 26px;
-    padding-bottom: 5px;
-    color: #000
+.deviceAll {
+  margin-left: 40px;
 }
 
+.header {
+  border-bottom: 1px solid #ccc;
+  padding-top: 10px;
+  height: 50px;
+  line-height: 50px;
+}
+
+.header h4 {
+  float: left;
+}
+
+.header .head_right {
+  float: right;
+}
+
+.all {
+  height: 106px;
+  border-bottom: 1px solid #ccc;
+}
+
+.all .one {
+  padding-top: 10px;
+  height: 105px;
+}
+.one .image{
+  width: 100%;
+  height:105px;
+  display: block;
+}
+.all .one img {
+  display: block;
+  height: 80%;
+  border: 1px dashed #ccc;
+}
+
+.all .two {
+  padding-top: 20px;
+  font-size: 14px;
+  color: #999894;
+}
+
+.all .three {
+  height: 90px;
+  line-height: 90px;
+  color: #888;
+  font-size: 16px;
+}
+
+.all .four {
+  height: 90px;
+  line-height: 90px;
+  position: relative;
+}
+
+.all .four a {
+  color: #888;
+  padding: 0 5px;
+  font-size: 14px;
+}
+
+.four img {
+  width: 24px;
+  display: block;
+  padding: 10px;
+}
+.four .delet {
+  position: absolute;
+  top: 17%;
+}
+.four .delet i {
+  display: block;
+  font-size: 26px;
+  padding-bottom: 5px;
+  color: #000;
+}
 </style>

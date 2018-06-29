@@ -5,21 +5,19 @@
                 <h3>在线反馈</h3>                  
               <ul>
                   <li>
-                      <router-link to="/user/deviceDisplay"> 留言反馈</router-link>
+                      <router-link to="/user/feadword"> 留言反馈</router-link>
                   </li>
                   <li>
-                      <router-link to="/device/triggerAll"> 反馈详情</router-link>
+                      <router-link to="/user/feaddetails"> 反馈详情</router-link>
                   </li>
               </ul>
           </div>
           </div>
       <div class="d_right">
-          <textarea name="" id="" cols="60" rows="30"></textarea>
           <router-view></router-view>
       </div>
   </div>
 </template>
-
 <script>
 export default {
   data() {

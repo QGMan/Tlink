@@ -1,5 +1,5 @@
 <template>
-  <div class="page">
+  <div class="page" style="height:100%">
       <div class="d_left">
           <div class="d_left1">
                 <h3>触发器</h3>                  
@@ -36,7 +36,7 @@
   </div>
 </template>
 
-<script>
+<script scoped>
 export default {
   data() {
     return {};
@@ -53,7 +53,7 @@ a {
 .d_left {
   width: 20%;
   float: left;
-  min-height: 750px;
+  min-height: 100%;
   border-right: 1px solid #ccc;
 }
 .d_left1 {

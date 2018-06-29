@@ -5,7 +5,7 @@
       <el-row :gutter="20" class="all">
         <el-col :span="3" class="one">
           <div class="grid-content bg-purple">
-            <router-link to="" class="image">
+            <router-link to="/device/deviceedit" class="image">
               <img src="../../../static/img/online-1.png" alt="">
             </router-link>
           </div>
